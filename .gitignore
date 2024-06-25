@@ -1,0 +1,17 @@
+# Ignore database backup files
+*.bak
+*.sqlbak
+
+# Ignore database export files
+*.sql
+*.dump
+
+# Ignore database logs
+*.log
+
+# Ignore database configuration files
+*.dsn
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
