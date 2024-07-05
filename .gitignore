@@ -3,7 +3,6 @@
 *.sqlbak
 
 # Ignore database export files
-*.sql
 *.dump
 
 # Ignore database logs
