@@ -1,29 +1,27 @@
+-- Create database 'demo' 
+CREATE DATABASE IF NOT EXISTS demo;
 
--- carete database demo
-CREATE DATABASE demo;
-
--- use database demo
+-- Use the 'demo' database
 USE demo;
 
--- create table users
-CREATE TABLE users (
+-- Create table 'users' 
+CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
--- insert user into users table
+-- Insert users into 'users' table
 INSERT INTO users (name, email) VALUES ('John Doe', 'john@gmail.com');
 INSERT INTO users (name, email) VALUES ('Jane Doe', 'jane@gmail.com');
 
--- select all users from users table
+-- Select all users from 'users' table
 SELECT * FROM users;
 
--- update user
+-- Update user information
 UPDATE users SET name = 'John Hello', email = 'hello@gmail.com' WHERE id = 1;
 
--- delete user
+-- Delete user by ID
 DELETE FROM users WHERE id = 2;
 
